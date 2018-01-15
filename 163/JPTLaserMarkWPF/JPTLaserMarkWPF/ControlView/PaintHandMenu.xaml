@@ -1,0 +1,32 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:CustomControl="clr-namespace:JPTLaserMarkWPF.CustomControl" x:Class="JPTLaserMarkWPF.ControlView.PaintHandMenu" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300" Height="300" Width="750" KeyDown="UserControl_KeyDown">
+    <Grid>
+
+        <CustomControl:MySlider x:Name="IntensitySlider" HorizontalAlignment="Left" Height="144" Margin="357,44,-1,0" VerticalAlignment="Top" Width="394"/>
+        <Image x:Name="OKImgBtn" HorizontalAlignment="Left" Height="100" Margin="640,190,0,0" VerticalAlignment="Top" Width="100" Source="/JPTLaserMarkWPF;component/Resources/ok1.png"/>
+        <Label x:Name="BrushSizeLbl" Content="画笔尺寸" HorizontalAlignment="Left" Margin="76,38,0,0" VerticalAlignment="Top" FontSize="36"/>
+        <Canvas MouseDown="Canvas_MouseDown">
+            <Border BorderBrush="Black" BorderThickness="0" x:Name="img2Brd" Canvas.Top="125" Canvas.Left="142" RenderTransformOrigin="1.036,0.474">
+                <Image  x:Name="P3Img" Height="175" Width="50" Source="pack://siteoforigin:,,,/Resources/BlueP3.png" MouseDown="P2Img_MouseDown" RenderTransformOrigin="-0.324,0.551"/>
+            </Border>
+            <Border BorderBrush="Black" BorderThickness="0" x:Name="img3Brd" Canvas.Top="125" Canvas.Left="282" RenderTransformOrigin="1.461,0.491">
+                <Image Canvas.Top="126" x:Name="P5Img" HorizontalAlignment="Left" Height="175" VerticalAlignment="Top" Width="50" Source="pack://siteoforigin:,,,/Resources/BlueP5.png" MouseDown="P3Img_MouseDown" Canvas.Left="228" RenderTransformOrigin="1.047,0.457"/>
+            </Border>
+            <Border BorderBrush="Black" BorderThickness="0" x:Name="img1Brd" Canvas.Top="125" Canvas.Left="16">
+                <Image  Canvas.Top="126" x:Name="P1Img" HorizontalAlignment="Left" Height="175" VerticalAlignment="Top" Width="50" Source="pack://siteoforigin:,,,/Resources/BlueP1.png" MouseDown="P1Img_MouseDown" Canvas.Left="10" RenderTransformOrigin="1.035,0.474"/>
+            </Border>
+            <Border BorderBrush="Black" BorderThickness="0" x:Name="img5Brd" Canvas.Top="125" Canvas.Left="209" RenderTransformOrigin="1.036,0.474">
+                <Image  x:Name="P4Img" Height="175" Width="50" Source="pack://siteoforigin:,,,/Resources/BlueP4.png" MouseDown="P5Img_MouseDown" RenderTransformOrigin="-0.324,0.551"/>
+            </Border>
+            <Border BorderBrush="Black" BorderThickness="0" x:Name="img4Brd" Canvas.Top="125" Canvas.Left="76" RenderTransformOrigin="1.036,0.474">
+                <Image  x:Name="P2Img" Height="175" Width="50" Source="pack://siteoforigin:,,,/Resources/BlueP2.png" RenderTransformOrigin="-0.324,0.551" MouseDown="P4Img_MouseDown"/>
+            </Border>
+        </Canvas>
+    </Grid>
+</UserControl>

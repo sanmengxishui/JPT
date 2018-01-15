@@ -1,0 +1,48 @@
+﻿<UserControl x:Name="PaintCtrl" x:Class="JPTLaserMarkWPF.ControlView.PaintControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" Height="1200" Width="800" Loaded="PaintCtrl_Loaded">
+    <Grid>
+        <Canvas x:Name="MenuC" HorizontalAlignment="Left" Height="450" Margin="0,754,0,-4" VerticalAlignment="Top" Width="800">
+            <Canvas.Background>
+                <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/MenuImg.png"/>
+            </Canvas.Background>
+        </Canvas>
+        <Border BorderBrush="Black" BorderThickness="0" HorizontalAlignment="Center" Height="750" VerticalAlignment="Top" Width="800">
+            <Grid x:Name="inkGrid">
+                <InkCanvas x:Name="inkC" HorizontalAlignment="Left" Height="750" VerticalAlignment="Top" Width="800" Background="Transparent">
+                    <InkCanvas.DefaultDrawingAttributes>
+                        <DrawingAttributes x:Name="attribute" Width="10" Height="10" Color="Black"/>
+                    </InkCanvas.DefaultDrawingAttributes>
+                    <Canvas x:Name="MainImg" Height="750" Width="800" Margin="0,0,0,0"/>
+                    <Image HorizontalAlignment="Left" Height="51" Margin="0,0,-100,-51" VerticalAlignment="Top" Width="100"/>
+                    <Image HorizontalAlignment="Left" Height="56" Margin="0,0,-69,-56" VerticalAlignment="Top" Width="69"/>
+                    <Image HorizontalAlignment="Left" Height="21" Margin="0,0,-6,-21" VerticalAlignment="Top" Width="6"/>
+                </InkCanvas>
+            </Grid>
+        </Border>
+        <Image x:Name="NewJobBtn" HorizontalAlignment="Left" Height="52" Margin="740,757,0,0" VerticalAlignment="Top" Width="50" Source="/JPTLaserMarkWPF;component/Resources/cancel11.png" RenderTransformOrigin="1.133,0.093" MouseDown="NewJobBtn_MouseDown"/>
+        <Image x:Name="UndoBtn" HorizontalAlignment="Left" Height="55" Margin="664,756,0,0" VerticalAlignment="Top" Width="60" Source="/JPTLaserMarkWPF;component/Resources/back11.png" RenderTransformOrigin="-0.333,0.173" MouseDown="UndoBtn_MouseDown"/>
+        <StackPanel x:Name="PaintMenuPnl" HorizontalAlignment="Left" Height="300" Margin="22,840,0,0" VerticalAlignment="Top" Width="750"/>
+        <Image Visibility="hidden" x:Name="PrintImgBtn" HorizontalAlignment="Left" Height="44" VerticalAlignment="Top" Width="780" Margin="66,10,0,0" Source="pack://siteoforigin:,,,/Resources/PrintLabel.png" Stretch="Fill" MouseDown="PrintImgBtn_MouseDown"/>
+        <StackPanel x:Name="BackImgPnl" HorizontalAlignment="Left"  VerticalAlignment="Top" Margin="108,754,0,0" Height="55" MouseDown="StackPanel_MouseDown_1" Width="97" Visibility="Hidden">
+            <Grid Height="63">
+                <TextBlock x:Name="BackBtn" FontSize="36" Margin="-389,-38,507,67" Foreground="White" RenderTransformOrigin="-6.642,0.161"><Run Text="返回"/></TextBlock>
+                <Image Source="pack://siteoforigin:,,,/Resources/MenuBackImg.png" Margin="21,-3,10,4"/>
+            </Grid>
+        </StackPanel>
+        <StackPanel x:Name="AlignImgPnl" HorizontalAlignment="Left"  VerticalAlignment="Top" Margin="0,756,0,0" Height="65"  Width="90" MouseDown="AlignImgPnl_MouseDown">
+            <Grid Margin="0,0,10,0" Height="51">
+                <TextBlock x:Name="AlignLbl" FontSize="36" Margin="-181,8,299,19" Foreground="White"><Run Text="对齐"/></TextBlock>
+                <Image Source="pack://siteoforigin:,,,/Resources/Align-Icon2.png" Margin="0,2,-15,0"/>
+            </Grid>
+        </StackPanel>
+        <Image x:Name="PrintImg" HorizontalAlignment="Left" Height="55" Margin="579,756,0,0" VerticalAlignment="Top" Width="60" Source="/JPTLaserMarkWPF;component/Resources/okok11.png" MouseDown="PrintImg_MouseDown" RenderTransformOrigin="0.574,0.501" Visibility="Hidden"/>
+        <Label x:Name="MenuLbl" Content="MENU" HorizontalAlignment="Left" Margin="334,781,0,0" VerticalAlignment="Top" Height="59" Width="140" RenderTransformOrigin="0.071,0.593" Background="#FF6CBEE2" Foreground="White" FontSize="36" FontWeight="Bold"/>
+
+
+
+    </Grid>
+</UserControl>

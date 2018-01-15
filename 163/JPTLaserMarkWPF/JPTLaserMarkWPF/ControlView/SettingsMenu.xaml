@@ -1,0 +1,114 @@
+﻿<UserControl x:Class="JPTLaserMarkWPF.ControlView.SettingsMenu"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300" Height="1200" Width="800">
+    <Grid>
+        <Image x:Name="SaveImgBtn" HorizontalAlignment="Left" Height="100" Margin="673,1080,0,0" VerticalAlignment="Top" Width="100" Source="pack://siteoforigin:,,,/Resources/SaveIcon.png"/>
+        <TabControl x:Name="SetMenuPC" HorizontalAlignment="Left" Height="1051" Margin="6,10,0,0" VerticalAlignment="Top" Width="784">
+            <TabItem x:Name="BoolTP" Header="Bool" FontSize="24" Visibility="Visible">
+                <Grid>
+                    <StackPanel x:Name="BoolSetPnl" HorizontalAlignment="Left" Height="1085" Margin="10,10,0,-30.5" VerticalAlignment="Top" Width="774">
+                        <Grid Height="1042">
+                            <CheckBox x:Name="SMBitInvertedCB" Content="Samlight位图反转 (黑/白)" HorizontalAlignment="Left" Margin="10,103,0,0" VerticalAlignment="Top" Foreground="CornflowerBlue" FontSize="12">
+                                <CheckBox.LayoutTransform>
+                                    <ScaleTransform ScaleX="3" ScaleY="3" />
+                                </CheckBox.LayoutTransform>
+                            </CheckBox>
+                            <CheckBox x:Name="SamLOnlineCB" Content="Samlight硬件连接" HorizontalAlignment="Left" Margin="11,19,0,0" VerticalAlignment="Top" Foreground="CornflowerBlue" FontSize="12">
+                                <CheckBox.LayoutTransform>
+                                    <ScaleTransform ScaleX="3" ScaleY="3" />
+                                </CheckBox.LayoutTransform>
+                            </CheckBox>
+                            <CheckBox x:Name="SamLGSCB" Content="Samlight硬件连接" HorizontalAlignment="Left" Margin="12,182,0,0" VerticalAlignment="Top" Foreground="CornflowerBlue" FontSize="12">
+                                <CheckBox.LayoutTransform>
+                                    <ScaleTransform ScaleX="3" ScaleY="3" />
+                                </CheckBox.LayoutTransform>
+                            </CheckBox>
+                            <CheckBox x:Name="ByPassDoorSensorCB" Content="ByPass Door Sensor" HorizontalAlignment="Left" Margin="11,189,0,0" VerticalAlignment="Top" Foreground="CornflowerBlue" FontSize="12" Visibility="Hidden">
+                                <CheckBox.LayoutTransform>
+                                    <ScaleTransform ScaleX="3" ScaleY="3" />
+                                </CheckBox.LayoutTransform>
+                            </CheckBox>
+                            <CheckBox x:Name="ByPassSampleSensorCB" Content="ByPass Sample Sensor" HorizontalAlignment="Left" Margin="11,270,0,0" VerticalAlignment="Top" Foreground="CornflowerBlue" FontSize="12" Visibility="Hidden">
+                                <CheckBox.LayoutTransform>
+                                    <ScaleTransform ScaleX="3" ScaleY="3" />
+                                </CheckBox.LayoutTransform>
+                            </CheckBox>
+                        </Grid>
+                    </StackPanel>
+                </Grid>
+            </TabItem>
+            <TabItem x:Name="Set1TP" Header="Set1" FontSize="24">
+                <Grid>
+                    <StackPanel x:Name="Set1Pnl" HorizontalAlignment="Left" Height="1085" Margin="10,10,0,-30.5" VerticalAlignment="Top" Width="774">
+                        <Grid>
+                            <Label x:Name="SamLightXScaleLbl" Content="图像到Samlight的比例X(%) (默认)" HorizontalAlignment="Center" FontSize="30" Foreground="CornflowerBlue" Margin="8,17,178,1207" Width="588"/>
+                            <Label x:Name="SamLightYScaleLbl" Content="图像到Samlight的比例Y(%) (默认)" HorizontalAlignment="Center" FontSize="30" Foreground="CornflowerBlue" Margin="8,78,178,1146" Width="588"/>
+                            <Label x:Name="SilderNameLbl_Copy1" Content="Samlight Dether Steps mm/pixel (High)" HorizontalAlignment="Center" FontSize="30" Foreground="CornflowerBlue" Margin="10,447,176,777" Width="588" Visibility="Hidden"/>
+                            <TextBox x:Name="ImgToSLScaleXEB" HorizontalAlignment="Left" Height="53" Margin="662,17,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="100" FontSize="30"/>
+                            <TextBox x:Name="ImgToSLScaleYEB" HorizontalAlignment="Left" Height="53" Margin="662,78,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="100" FontSize="30"/>
+                            <TextBox x:Name="SLDetherStepHEB" HorizontalAlignment="Left" Height="53" Margin="603,447,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="166" FontSize="30" Visibility="Hidden"/>
+                            <Label x:Name="SilderNameLbl_Copy2" Content="Samlight Dether Steps mm/pixel (Low)" HorizontalAlignment="Center" FontSize="30" Foreground="CornflowerBlue" Margin="10,511,176,713" Width="588" Visibility="Hidden"/>
+                            <TextBox x:Name="SLDetherStepLEB" HorizontalAlignment="Left" Height="53" Margin="603,511,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="166" FontSize="30" Visibility="Hidden"/>
+                            <Label x:Name="SLDetherStepLbl" Content="Samlight精细度mm/pixel (标准)" HorizontalAlignment="Center" FontSize="30" Foreground="CornflowerBlue" Margin="10,168,123,1056" Width="641"/>
+                            <TextBox x:Name="SLDetherStepSEB" HorizontalAlignment="Left" Height="53" Margin="662,163,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="100" FontSize="30" TextChanged="SLDetherStepSEB_TextChanged"/>
+                            <Label x:Name="SLOffsetXLbl" Content="Samlight中心到实际中心偏移X" HorizontalAlignment="Center" FontSize="30" Foreground="CornflowerBlue" Margin="10,254,123,970" Width="641"/>
+                            <TextBox x:Name="SLCtrToActCtrXEB" HorizontalAlignment="Left" Height="53" Margin="662,254,-54,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="100" FontSize="30"/>
+                            <Label x:Name="SLOffsetYLbl" Content="Samlight中心到实际中心偏移Y" HorizontalAlignment="Center" FontSize="30" Foreground="CornflowerBlue" Margin="10,320,123,904" Width="641"/>
+                            <TextBox x:Name="SLCtrToActCtrYEB" HorizontalAlignment="Left" Height="53" Margin="662,320,-54,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="100" FontSize="30"/>
+                            <Label x:Name="SilderNameLbl_Copy6" Content="Image To Samlight Scale X (mm) (Min)" HorizontalAlignment="Center" FontSize="30" Foreground="CornflowerBlue" Margin="8,809,178,415" Width="588" Visibility="Hidden"/>
+                            <Label x:Name="SilderNameLbl_Copy7" Content="Image To Samlight Scale Y (mm) (Min)" HorizontalAlignment="Center" FontSize="30" Foreground="CornflowerBlue" Margin="8,870,178,354" Width="588" Visibility="Hidden"/>
+                            <TextBox x:Name="ImgToSLScaleXSEB" HorizontalAlignment="Left" Height="53" Margin="600,809,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="166" FontSize="30" Visibility="Hidden"/>
+                            <TextBox x:Name="ImgToSLScaleYSEB" HorizontalAlignment="Left" Height="53" Margin="604,870,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="166" FontSize="30" Visibility="Hidden"/>
+                            <Label x:Name="SilderNameLbl_Copy8" Content="Image To Samlight Scale X (mm) (Max)" HorizontalAlignment="Center" FontSize="30" Foreground="CornflowerBlue" Margin="8,926,178,298" Width="588" Visibility="Hidden"/>
+                            <Label x:Name="SilderNameLbl_Copy9" Content="Image To Samlight Scale Y (mm) (Max)" HorizontalAlignment="Center" FontSize="30" Foreground="CornflowerBlue" Margin="8,987,178,237" Width="588" Visibility="Hidden"/>
+                            <TextBox x:Name="ImgToSLScaleXLEB" HorizontalAlignment="Left" Height="53" Margin="604,921,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="166" FontSize="30" Visibility="Hidden"/>
+                            <TextBox x:Name="ImgToSLScaleYLEB" HorizontalAlignment="Left" Height="53" Margin="604,982,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="166" FontSize="30" Visibility="Hidden"/>
+                            <Label x:Name="LangaugeLB" Content="语言" HorizontalAlignment="Center" FontSize="30" Foreground="CornflowerBlue" Margin="10,432,123,792" Width="641"/>
+                            <ComboBox x:Name="LangCB" HorizontalAlignment="Left" Margin="474,432,0,0" VerticalAlignment="Top" Width="288" FontSize="30" SelectedIndex="1" SelectionChanged="LangCB_SelectionChanged">
+                                <ComboBoxItem Name="EngItem">English</ComboBoxItem>
+                                <ComboBoxItem Name="ChineseItem">中文</ComboBoxItem>
+                            </ComboBox>
+                            <Label x:Name="ColorLB" Content="Color" HorizontalAlignment="Center" FontSize="30" Foreground="CornflowerBlue" Margin="10,520,123,704" Width="641"/>
+                            <ComboBox x:Name="ColorCB" HorizontalAlignment="Left" Margin="474,520,0,0" VerticalAlignment="Top" Width="288" FontSize="30" SelectedIndex="0" SelectionChanged="ColorCB_SelectionChanged" >
+                                <ComboBoxItem Name="BlueItem">Blue / 蓝色</ComboBoxItem>
+                                <ComboBoxItem Name="PinkItem">Pink / 粉红</ComboBoxItem>
+                                <ComboBoxItem Name="GreenItem">Green / 绿色</ComboBoxItem>
+                                <ComboBoxItem Name="YellowItem">Orange / 橙色</ComboBoxItem>
+                                <ComboBoxItem Name="PurpleItem">Purple / 紫色</ComboBoxItem>
+                            </ComboBox>
+
+                        </Grid>
+                    </StackPanel>
+
+                </Grid>
+            </TabItem>
+            <TabItem x:Name="Set2TP" Header="Set2" FontSize="24">
+                <Grid>
+                    <StackPanel x:Name="Set2Pnl" HorizontalAlignment="Left" Height="998" Margin="4,10,0,0" VerticalAlignment="Top" Width="774">
+                        <Grid Margin="-10,0,10,0">
+                            <Label x:Name="PhonePwLbl" Content="设置打标激光功率(Watt)" HorizontalAlignment="Center" FontSize="30" Foreground="CornflowerBlue" Margin="10,15,203,1209" Width="561"/>
+                            <TextBox x:Name="PhoneSetPowerEB" HorizontalAlignment="Left" Height="53" Margin="598,17,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="166" FontSize="30"/>
+                            <Label x:Name="PhoneSpeedLbl" Content="设置打标速度 (mm/s)" HorizontalAlignment="Center" FontSize="30" Foreground="CornflowerBlue" Margin="10,92,203,1132" Width="561"/>
+                            <TextBox x:Name="PhoneSetSpeedEB" HorizontalAlignment="Left" Height="53" Margin="598,94,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="166" FontSize="30"/>
+                            <Label x:Name="PhoneFreqLbl" Content="设置打标频率(kHz)" HorizontalAlignment="Center" FontSize="30" Foreground="CornflowerBlue" Margin="10,168,236,1056" Width="528"/>
+                            <TextBox x:Name="PhoneSetFreqEB" HorizontalAlignment="Left" Height="53" Margin="598,147,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="166" FontSize="30"/>
+                            <Label x:Name="CardPwLbl" Content="Card Marking Setting Laser Power (Watt)" HorizontalAlignment="Center" FontSize="30" Foreground="CornflowerBlue" Margin="15,337,197,887" Width="628" Visibility="Hidden"/>
+                            <TextBox x:Name="CardSetPowerEB" HorizontalAlignment="Left" Height="53" Margin="664,332,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="166" FontSize="30" Visibility="Hidden"/>
+                            <Label x:Name="CardSpeedLbl" Content="Card Marking Setting Speed (mm/s)" HorizontalAlignment="Center" FontSize="30" Foreground="CornflowerBlue" Margin="15,417,197,807" Width="628" Visibility="Hidden"/>
+                            <TextBox x:Name="CardSetSpeedEB" HorizontalAlignment="Left" Height="53" Margin="664,417,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="166" FontSize="30" Visibility="Hidden"/>
+                            <Label x:Name="CardFreqLbl" Content="Card Marking Setting Frequency (kHz)" HorizontalAlignment="Center" FontSize="30" Foreground="CornflowerBlue" Margin="15,508,197,716" Width="628" Visibility="Hidden"/>
+                            <TextBox x:Name="CardSetFreqEB" HorizontalAlignment="Left" Height="53" Margin="664,503,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="166" FontSize="30" Visibility="Hidden"/>
+                        </Grid>
+                    </StackPanel>
+                </Grid>
+            </TabItem>
+        </TabControl>
+        <Image HorizontalAlignment="Left" Height="100" Margin="40,1080,0,0" VerticalAlignment="Top" Width="100" Source="pack://siteoforigin:,,,/Resources/LeftArrowSettings.png" MouseDown="Image_MouseDown_1"/>
+        <Image HorizontalAlignment="Left" Height="100" Margin="382,1080,0,0" VerticalAlignment="Top" Width="100" Source="pack://siteoforigin:,,,/Resources/RightArrowSettings.png" MouseDown="Image_MouseDown_2"/>
+        <Label x:Name="PageLbl" Content="Page 1 / 3" HorizontalAlignment="Left" Margin="167,1102,0,0" VerticalAlignment="Top" FontSize="36" Foreground="CornflowerBlue"/>
+    </Grid>
+</UserControl>

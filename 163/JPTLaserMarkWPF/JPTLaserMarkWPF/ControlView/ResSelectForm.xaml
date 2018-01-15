@@ -1,0 +1,10 @@
+﻿<Window x:Name="ResSelectionFrm" x:Class="JPTLaserMarkWPF.ControlView.ResSelectForm"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Resolution Selection" Height="286" Width="316" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Topmost="True">
+    <Grid>
+        <Button Content="Low Resolution" HorizontalAlignment="Left" Height="54" Margin="10,21,0,0" VerticalAlignment="Top" Width="290" Click="Button_Click_1" FontSize="24" MouseDown="Button_MouseDown_1" TouchDown="Button_TouchDown_2"/>
+        <Button Content="Standard Resolution" HorizontalAlignment="Left" Height="54" Margin="10,100,0,0" VerticalAlignment="Top" Width="290" Click="Button_Click_3" FontSize="24" MouseDown="Button_MouseDown_2" TouchDown="Button_TouchDown_1"/>
+        <Button Content="High Resolution" HorizontalAlignment="Left" Height="54" Margin="10,182,0,0" VerticalAlignment="Top" Width="290" Click="Button_Click_4" FontSize="24" MouseDown="Button_MouseDown_3" TouchDown="Button_TouchDown_3"/>
+    </Grid>
+</Window>

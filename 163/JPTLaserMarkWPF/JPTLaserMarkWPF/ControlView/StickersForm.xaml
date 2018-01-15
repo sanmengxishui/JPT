@@ -1,0 +1,9 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:CustomControl="clr-namespace:JPTLaserMarkWPF.CustomControl" x:Class="JPTLaserMarkWPF.ControlView.StickersForm"
+        Title="StickersForm" Height="261.75" Width="508.25" ResizeMode="NoResize" Loaded="Window_Loaded_1" WindowStartupLocation="CenterScreen">
+    <Grid HorizontalAlignment="Left" Height="271.5" VerticalAlignment="Top" Width="502">
+        <CustomControl:ImageGalleryControl x:Name="StickerGalleryCtrl" HorizontalAlignment="Left" VerticalAlignment="Top" Height="200" Width="479" Margin="10,10,0,0"/>
+    </Grid>
+</Window>

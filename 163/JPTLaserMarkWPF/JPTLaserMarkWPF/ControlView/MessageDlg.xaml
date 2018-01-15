@@ -1,0 +1,13 @@
+﻿<Window x:Class="JPTLaserMarkWPF.ControlView.MessageDlg"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MessageDlg" Height="266" Width="600" ResizeMode="NoResize" Topmost="True" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Image x:Name="Img" HorizontalAlignment="Left" Height="100" Margin="10,10,0,0" VerticalAlignment="Top" Width="100" Source="pack://siteoforigin:,,,/Resources/ErrorImg.png"/>
+        <TextBlock x:Name="MsgBox" HorizontalAlignment="Left" Margin="139,10,0,0" Text="TextBlock" VerticalAlignment="Top" Height="156" Width="438" FontSize="36" TextWrapping="WrapWithOverflow" />
+        <Button x:Name="OKBtn" Content="确认" HorizontalAlignment="Left" Margin="152,171,0,0" VerticalAlignment="Top" Width="151" FontSize="36" MouseDown="Button_MouseDown_1" TouchDown="Button_TouchDown_1" Click="Button_Click_1"/>
+        <Image x:Name="InformationImg" HorizontalAlignment="Left" Height="186" Margin="-32,-20,0,0" VerticalAlignment="Top" Width="183" Source="pack://siteoforigin:,,,/Resources/InformationIcon.png" Visibility="Hidden"/>
+        <Button x:Name="CancelBtn" Content="取消" HorizontalAlignment="Left" Margin="342,171,0,0" VerticalAlignment="Top" Width="151" FontSize="36" MouseDown="CancelBtn_MouseDown" TouchDown="CancelBtn_TouchDown"/>
+
+    </Grid>
+</Window>

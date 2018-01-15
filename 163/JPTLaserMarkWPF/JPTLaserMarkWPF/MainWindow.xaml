@@ -1,0 +1,22 @@
+﻿<Window x:Class="JPTLaserMarkWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="JPT Laser Marker" Height="1280" Width="800" Loaded="Window_Loaded_1" WindowStartupLocation="CenterScreen" WindowState="Maximized" Closing="Window_Closing_1" Closed="Window_Closed_1" >
+    <!--ManipulationStarting="Window_ManipulationStarting_1" ManipulationDelta="Window_ManipulationDelta_1" ManipulationInertiaStarting="Window_ManipulationInertiaStarting_1"-->
+    <Grid x:Name="MainGrid">
+        <Grid.Background>
+            <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/background.png"/>
+        </Grid.Background>
+        <StackPanel x:Name="MenuPnl" HorizontalAlignment="Left" Height="1200" Margin="-2,53,-3,-0.5" VerticalAlignment="Top" Width="800">
+            <StackPanel.Background>
+                <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/background.png"/>
+            </StackPanel.Background>
+        </StackPanel>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="602,10,0,0" VerticalAlignment="Top" Width="76" Click="Button_Click_1" Visibility="Hidden"/>
+        <Image x:Name="HeadImg" HorizontalAlignment="Left" Height="117" VerticalAlignment="Top" Width="792" RenderTransformOrigin="-3.788,0.12" Source="pack://siteoforigin:,,,/Resources/head.png"/>
+        <Image x:Name="SettingImgBtn" HorizontalAlignment="Left" Height="50" Margin="732,-2,0,0" VerticalAlignment="Top" Width="50" Source="pack://siteoforigin:,,,/Resources/settingsIcon.png" MouseDown="SettingImgBtn_MouseDown"/>
+        <Label x:Name="VersionLbl" Content="Version 2.0.0.0" HorizontalAlignment="Left" Margin="-49,-96,0,0" VerticalAlignment="Top" RenderTransformOrigin="-3.323,0.906" FontSize="24"/>
+        <Image x:Name="PrintBtn" HorizontalAlignment="Left" Height="75" Margin="823,109,-101,0" VerticalAlignment="Top" Width="70" Source="Resources/light.png" MouseDown="PrintBtn_MouseDown"/>
+        <Image HorizontalAlignment="Left" Height="53" Margin="21,20,0,0" VerticalAlignment="Top" Width="169" Source="pack://siteoforigin:,,,/Resources/NewLOGO.jpg"/>
+    </Grid>
+</Window>

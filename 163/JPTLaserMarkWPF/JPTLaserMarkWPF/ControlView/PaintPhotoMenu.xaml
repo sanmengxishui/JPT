@@ -1,0 +1,23 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:CustomControl="clr-namespace:JPTLaserMarkWPF.CustomControl" x:Class="JPTLaserMarkWPF.ControlView.PaintPhotoMenu" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300"  Height="300" Width="750">
+
+    <Grid>
+        <CustomControl:ImageGalleryControl x:Name="ImgGalleryCtrl" HorizontalAlignment="Left" VerticalAlignment="Top" Height="248" Width="525" Margin="115,42,0,0"/>
+        <Image x:Name="OKImgBtn" HorizontalAlignment="Left" Height="100" Margin="640,190,0,0" VerticalAlignment="Top" Width="100" Source="/JPTLaserMarkWPF;component/Resources/ok1.png" MouseDown="OKImgBtn_MouseDown"/>
+        <Image x:Name="ServerImgBtn" HorizontalAlignment="Left" Height="100" Margin="10,10,0,0" VerticalAlignment="Top" Width="100" Source="pack://siteoforigin:,,,/Resources/ServerIcon.png" MouseDown="ServerImgBtn_MouseDown"/>
+        <Image x:Name="StickerImgBtn" HorizontalAlignment="Left" Height="85" Margin="518,27,0,0" VerticalAlignment="Top" Width="100" Source="pack://siteoforigin:,,,/Resources/stickers_icon.png" MouseDown="StickerImgBtn_MouseDown" Visibility="Hidden"/>
+        <Image x:Name="OKImgBtn_Copy1" HorizontalAlignment="Left" Height="100" Margin="337,410,0,-180" VerticalAlignment="Top" Width="100" Source="pack://siteoforigin:,,,/Resources/Bluetooth.png"/>
+        <Image x:Name="OpenImgBtn" HorizontalAlignment="Left" Height="100" Margin="640,0,0,0" VerticalAlignment="Top" Width="100" Source="pack://siteoforigin:,,,/Resources/Open_File_Icon.png" MouseDown="OpenImgBtn_MouseDown" TouchDown="OpenImgBtn_TouchDown" MouseUp="OpenImgBtn_MouseUp" LostFocus="OpenImgBtn_LostFocus"/>
+        <Image x:Name="AddImgBtn" HorizontalAlignment="Left" Height="70" Margin="21,440,0,-180" VerticalAlignment="Top" Width="70" Source="pack://siteoforigin:,,,/Resources/plusIcon.png" RenderTransformOrigin="0.103,0.491" MouseDown="AddImgBtn_MouseDown"/>
+        <CustomControl:ImageGalleryControl x:Name="StickerGalleryCtrl" HorizontalAlignment="Left" VerticalAlignment="Top" Height="200" Width="479" Margin="545,340,-274,-240"/>
+        <Image x:Name="AddStickerImgBtn" HorizontalAlignment="Left" Height="70" Margin="470,440,0,-180" VerticalAlignment="Top" Width="70" Source="pack://siteoforigin:,,,/Resources/plusIcon.png" RenderTransformOrigin="0.103,0.491" MouseDown="AddStickerImgBtn_MouseDown"/>
+        <Image x:Name="AlignImageBtn" HorizontalAlignment="Left" Height="100" Margin="161,410,0,-180" VerticalAlignment="Top" Width="149" Source="pack://siteoforigin:,,,/Resources/AlignSingle.png" MouseDown="AlignImageBtn_MouseDown"/>
+        
+    </Grid>
+</UserControl>
