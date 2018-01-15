@@ -47,6 +47,7 @@ namespace Common
     }       
     public class Para
     {
+	//revised version by Alvin
         public static string MchName = "JPTLaserMarker";
         public static string MchAppName = "JPT Laser Marker";
         public static string defaultSettingsName = "JPT_Settings.xml";
