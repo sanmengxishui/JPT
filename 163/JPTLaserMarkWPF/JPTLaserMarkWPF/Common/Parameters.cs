@@ -47,6 +47,7 @@ namespace Common
     }       
     public class Para
     {
+        //20180116
 	//revised version by Alvin
         public static string MchName = "JPTLaserMarker";
         public static string MchAppName = "JPT Laser Marker";

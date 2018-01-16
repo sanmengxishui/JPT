@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\Projects\A163\Software\WPF\Jan18\New UI Sequence\JPTLaserMarkWPF\JPTLaserMarkWPF\obj\Debug\
+C:\Users\Administrator\Desktop\JPT-master\JPT-master\163\JPTLaserMarkWPF\JPTLaserMarkWPF\obj\Debug\
 JPTLaserMarkWPF
 none
 false
 DEBUG;TRACE
-D:\Projects\A163\Software\WPF\Jan18\New UI Sequence\JPTLaserMarkWPF\JPTLaserMarkWPF\App.xaml
+C:\Users\Administrator\Desktop\JPT-master\JPT-master\163\JPTLaserMarkWPF\JPTLaserMarkWPF\App.xaml
 16267894614
 
-3148345997
-20-974675360
+31783161603
+20-955130569
 ControlView\MessageDlg.xaml;ControlView\Processing.xaml;ControlView\ResSelectForm.xaml;ControlView\PaintHandMenu.xaml;ControlView\PaintMainMenu.xaml;ControlView\PaintPhotoMenu.xaml;ControlView\PaintTypeMenu.xaml;ControlView\ServerForm.xaml;ControlView\SettingsMenu.xaml;ControlView\SettingsControl.xaml;ControlView\PaintControl.xaml;ControlView\StickersForm.xaml;ControlView\WebCamControl.xaml;CustomControl\ImageGalleryControl.xaml;CustomControl\MySlider.xaml;MainWindow.xaml;
 
-False
+True
 

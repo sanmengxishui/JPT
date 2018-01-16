@@ -26,6 +26,7 @@ namespace JPTLaserMarkWPF
     /// </summary>
     public partial class MainWindow : Window
     {
+        //20180116
         PaintControl myPaintCtrl;
         SettingsMenu mySet;
         public SamLightClass SLMgr;        
